@@ -21,7 +21,7 @@ class DependencyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        queue.maxConcurrentOperationCount = 2
+        queue.maxConcurrentOperationCount = 3
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,8 +44,8 @@ class DependencyViewController: UIViewController {
             self?.POSTView.text = String(describing: operation.JSON)
         }
         
+        self.delayOp.addDependency(self.postRequest)
         self.getRequest.addDependency(self.delayOp)
-        self.getRequest.addDependency(self.postRequest)
         
         queue.add(operations: getRequest, postRequest, delayOp)
 
