@@ -1,0 +1,6 @@
+[submodule "ProcedureKitTest/ProcedureKit"]
+	path = ProcedureKitTest/ProcedureKit
+	url = git@github.com:ProcedureKit/ProcedureKit.git
+[submodule "ProcedureKitTest/Alamofire"]
+	path = ProcedureKitTest/Alamofire
+	url = git@github.com:Alamofire/Alamofire.git
